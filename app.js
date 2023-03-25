@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const { json } = require('express');
 const contactRouter = require('./router/contact-route');
 require('./model/db');
+require("dotenv").config();
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }))

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const mongodbUrl = 'mongodb://localhost:27017/Contact-Manager';
+require("dotenv").config()
+const mongodbUrl = process.env.DB;
+
 mongoose.connect(mongodbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
